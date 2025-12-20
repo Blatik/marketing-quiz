@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Маркетинговий Аудит 2025 | Системний прибуток</title>
+  <meta name="description"
+    content="Отримайте план впровадження системи 'Сайт + Meta Ads', яка стабільно генерує прибуток.">
+
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Маркетинговий Аудит 2025 | Ігор Digital">
+  <meta property="og:description"
+    content="Дізнайтеся, як перестати зливати бюджет і масштабувати бізнес за допомогою системи Сайт + Meta Ads.">
+  <meta property="og:image" content="/favicon.png">
+
+  <!-- Facebook Pixel Code -->
+  <script>
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () {
+        n.callMethod ?
+        n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      }; if (!f._fbq) f._fbq = n;
+      n.push = n; n.loaded = !0; n.version = '2.0'; n.queue = []; t = b.createElement(e); t.async = !0;
+      t.src = v; s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s)
+    }(window,
+      document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', 'YOUR_PIXEL_ID_HERE'); // ЗАМІНІТЬ НА ВАШ ID
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID_HERE&ev=PageView&noscript=1" /></noscript>
+  <!-- End Facebook Pixel Code -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Outfit:wght@200;300;400;600&display=swap"
+    rel="stylesheet">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="stylesheet" href="/style.css">
+  <style>
+    /* Extra luxury touch: smooth scroll and initial hide to prevent FOUC */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      opacity: 0;
+      transition: opacity 0.5s ease-in;
+    }
+
+    body.loaded {
+      opacity: 1;
+    }
+  </style>
+</head>
+
+<body class="loaded">
+  <div id="app">
+    <div class="container">
+      <header>
+        <div class="logo">
+          <img src="/favicon.png" alt="Logo" class="logo-icon">
+          <span class="first-name">Igor</span><span class="last-name">Digital</span>
+        </div>
+      </header>
+
+      <main>
+        <!-- Welcome Screen -->
+        <section id="welcome-screen" class="active">
+          <div class="hero">
+            <h1 class="fade-in">Ви будуєте систему чи граєте в лотерею з маркетингом?</h1>
+            <p class="subtitle fade-in delay-1">Отримайте план впровадження системи <strong>"Сайт + Meta Ads"</strong>,
+              яка стабільно генерує прибуток, а не просто заявки.</p>
+            <button id="start-quiz" class="btn-primary fade-in delay-2">Пройти діагностику бізнесу</button>
+            <div class="social-proof fade-in delay-3">Вже 50+ бізнесів впровадили цю систему у 2024-2025</div>
+          </div>
+        </section>
+
+        <!-- Quiz Screen -->
+        <section id="quiz-screen">
+          <div class="quiz-container">
+            <div class="progress-bar">
+              <div class="progress-fill" id="progress-fill"></div>
+            </div>
+            <div class="quiz-content" id="quiz-content">
+              <!-- Question will be injected here -->
+            </div>
+          </div>
+        </section>
+
+        <!-- Analysis Screen (Visual Bridge) -->
+        <section id="analysis-screen">
+          <div class="analysis-container">
+            <div class="loader-circle"></div>
+            <h2 id="analysis-text">Аналізуємо вашу нішу...</h2>
+            <div class="analysis-steps">
+              <p class="analysis-step" id="step-1">Прорахунок вартості ліда...</p>
+              <p class="analysis-step" id="step-2">Пошук точок зливу бюджету...</p>
+              <p class="analysis-step" id="step-3">Формування стратегії масштабування...</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Thank You Screen -->
+        <section id="thank-you-screen">
+          <div class="thank-you-container">
+            <div class="success-header">
+              <div class="badge">100% Завершено</div>
+            </div>
+            <div class="profile-block">
+              <div class="profile-video">
+                <!-- Placeholder for photo/video -->
+                <img src="/igor-profile.jpg" alt="Ігор" id="profile-img">
+              </div>
+              <div class="profile-text text-left">
+                <h2>Ваша стратегія вже формується</h2>
+                <p><strong>Привіт, я Ігор.</strong> Я спеціалізуюся на створенні маркетингових систем:
+                  <strong>конверсійні сайти + професійна реклама у Facebook/Instagram.</strong>
+                </p>
+                <p>Судячи з ваших відповідей, я вже розумію, які саме інструменти допоможуть вам "пробити стелю".
+                  Натисніть кнопку нижче, щоб отримати готовий план.</p>
+
+                <div class="cta-box">
+                  <h3>Напишіть мені в Telegram слово "СИСТЕМА"</h3>
+                  <p>Ви отримаєте пріоритетний розбір та мій авторський чек-лист "7 факторів продажів".</p>
+                  <a href="https://t.me/blat_a?text=СИСТЕМА. Привіт, Ігоре! Пройшов ваш аудит. Чекаю на PDF-розбір і обговорення моєї ніші."
+                    class="btn-telegram">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM16.64 8.8C16.49 10.38 15.82 14.33 15.48 16.14C15.34 16.91 15.05 17.17 14.78 17.2C14.19 17.25 13.74 16.81 13.17 16.44C12.28 15.86 11.78 15.5 10.92 14.93C9.92 14.27 10.57 13.91 11.14 13.32C11.29 13.17 13.88 10.8 13.93 10.58C13.94 10.55 13.95 10.45 13.89 10.4C13.83 10.35 13.74 10.37 13.67 10.38C13.57 10.4 12.01 11.43 8.99 13.47C8.55 13.77 8.15 13.92 7.79 13.91C7.39 13.9 6.62 13.5 6.05 13.31C5.35 13.08 4.79 12.96 4.84 12.58C4.87 12.38 5.15 12.17 5.67 11.95C8.87 10.56 11.01 9.64 12.08 9.2C15.13 7.94 15.76 7.72 16.17 7.72C16.26 7.72 16.46 7.74 16.59 7.84C16.7 7.93 16.73 8.06 16.74 8.16C16.75 8.3 16.75 8.56 16.64 8.8Z"
+                        fill="white" />
+                    </svg>
+                    Написати Ігорю (Telegram)
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <p>&copy; 2025 IgorDigital. Всі права захищені.</p>
+        <p style="margin-top: 8px; opacity: 0.5;"><a href="/privacy"
+            style="color: inherit; text-decoration: underline;">Політика конфіденційності</a></p>
+      </footer>
+    </div>
+  </div>
+  <script type="module" src="/main.js"></script>
+</body>
+
+</html>
