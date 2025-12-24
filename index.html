@@ -26,11 +26,16 @@
       t.src = v; s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s)
     }(window,
       document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '874690631677348');
+    fbq('init', '1824335548164272');
+    fbq('init', '1605425227320257');
     fbq('track', 'PageView');
   </script>
-  <noscript><img height="1" width="1" style="display:none"
-      src="https://www.facebook.com/tr?id=874690631677348&ev=PageView&noscript=1" /></noscript>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=1824335548164272&ev=PageView&noscript=1" />
+    <img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=1605425227320257&ev=PageView&noscript=1" />
+  </noscript>
   <!-- End Facebook Pixel Code -->
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -113,7 +118,7 @@
             <div class="profile-block">
               <div class="profile-video">
                 <!-- Placeholder for photo/video -->
-                <img src="/igor-profile.jpg" alt="Ігор" id="profile-img">
+                <img src="/profile-new.png" alt="Ігор" id="profile-img">
               </div>
               <div class="profile-text text-left">
                 <h2>Ваша стратегія вже формується</h2>
@@ -124,17 +129,25 @@
                   Натисніть кнопку нижче, щоб отримати готовий план.</p>
 
                 <div class="cta-box">
-                  <h3>Напишіть мені в Telegram слово "СИСТЕМА"</h3>
-                  <p>Ви отримаєте пріоритетний розбір та мій авторський чек-лист "7 факторів продажів".</p>
-                  <a href="https://t.me/blat_a?text=СИСТЕМА. Привіт, Ігоре! Пройшов ваш аудит. Чекаю на PDF-розбір і обговорення моєї ніші."
-                    class="btn-telegram">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM16.64 8.8C16.49 10.38 15.82 14.33 15.48 16.14C15.34 16.91 15.05 17.17 14.78 17.2C14.19 17.25 13.74 16.81 13.17 16.44C12.28 15.86 11.78 15.5 10.92 14.93C9.92 14.27 10.57 13.91 11.14 13.32C11.29 13.17 13.88 10.8 13.93 10.58C13.94 10.55 13.95 10.45 13.89 10.4C13.83 10.35 13.74 10.37 13.67 10.38C13.57 10.4 12.01 11.43 8.99 13.47C8.55 13.77 8.15 13.92 7.79 13.91C7.39 13.9 6.62 13.5 6.05 13.31C5.35 13.08 4.79 12.96 4.84 12.58C4.87 12.38 5.15 12.17 5.67 11.95C8.87 10.56 11.01 9.64 12.08 9.2C15.13 7.94 15.76 7.72 16.17 7.72C16.26 7.72 16.46 7.74 16.59 7.84C16.7 7.93 16.73 8.06 16.74 8.16C16.75 8.3 16.75 8.56 16.64 8.8Z"
-                        fill="white" />
-                    </svg>
-                    Написати Ігорю (Telegram)
-                  </a>
+                  <h3>Залиште контакти для отримання стратегії</h3>
+                  <p>Вкажіть вашу пошту, і ми надішлемо вам розбір та чек-лист.</p>
+
+                  <form id="lead-form" class="lead-form">
+                    <div class="input-group">
+                      <input type="text" id="lead-name" placeholder="Ваше ім'я" required>
+                    </div>
+                    <div class="input-group">
+                      <input type="email" id="lead-contact" placeholder="Ваш Email" required>
+                    </div>
+                    <button type="submit" id="submit-lead" class="btn-telegram">
+                      <span>Надіслати та отримати план</span>
+                    </button>
+                  </form>
+
+                  <div id="form-success" class="hidden">
+                    <p class="success-msg">✅ Дані надіслано! Ми зв'яжемося з вами найближчим часом.</p>
+                    <a href="https://t.me/blat_a" class="btn-secondary">Перейти в Telegram зараз</a>
+                  </div>
                 </div>
               </div>
             </div>

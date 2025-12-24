@@ -246,48 +246,72 @@ h1 {
 }
 
 /* Lead Form */
-.lead-container {
-  max-width: 500px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.lead-container h2 {
-  font-size: 32px;
-  margin-bottom: 16px;
+.cta-box h3 {
+  font-size: 24px;
+  margin-bottom: 12px;
   font-weight: 700;
 }
 
-.form-group {
-  margin-bottom: 24px;
-  text-align: left;
+.cta-box p {
+  margin-bottom: 24px !important;
 }
 
-.form-group label {
-  display: block;
-  font-size: 12px;
-  font-weight: 600;
-  margin-bottom: 8px;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: var(--gray-text);
+.lead-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 400px;
+  margin: 0 auto;
 }
 
-.form-group input {
+.input-group {
   width: 100%;
-  padding: 20px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 18px 24px;
   background: var(--glass-bg);
   border: 1px solid var(--glass-border);
-  border-radius: 16px;
+  border-radius: 100px;
   color: #fff;
-  font-size: 17px;
+  font-size: 16px;
   outline: none;
+  transition: var(--transition);
+  text-align: center;
+}
+
+.input-group input:focus {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #fff;
+}
+
+.btn-telegram:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.success-msg {
+  color: #4ade80;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.btn-secondary {
+  display: inline-block;
+  color: #fff;
+  text-decoration: underline;
+  font-size: 14px;
+  opacity: 0.7;
   transition: var(--transition);
 }
 
-.form-group input:focus {
-  background: rgba(255, 255, 255, 0.1);
-  border-color: #fff;
+.btn-secondary:hover {
+  opacity: 1;
+}
+
+.hidden {
+  display: none !important;
 }
 
 /* Thank You Screen */

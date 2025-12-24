@@ -156,18 +156,65 @@ function finishQuiz() {
     fbq('track', 'Lead');
   }
 
-  // Update Telegram Link with detailed report
-  const tgBtn = document.querySelector('.btn-telegram');
-  if (tgBtn) {
-    let report = `\n🚀 Привіт, Ігоре! Я щойно пройшов квіз. Хочу отримати розбір моєї ситуації та стратегію "Сайт + FB Ads" у Telegram.`;
-    report += `🏁 *РЕЗУЛЬТАТИ АУДИТУ*\n\n`;
+  showScreen('thank-you-screen');
+  initLeadForm();
+}
+
+function initLeadForm() {
+  const form = document.getElementById('lead-form');
+  const successDiv = document.getElementById('form-success');
+
+  if (!form) return;
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const submitBtn = document.getElementById('submit-lead');
+    submitBtn.disabled = true;
+    submitBtn.innerText = 'Надсилаємо...';
+
+    const name = document.getElementById('lead-name').value;
+    const contact = document.getElementById('lead-contact').value;
+
+    let report = `🚀 *НОВИЙ ЛІД З КВІЗУ*\n\n`;
+    report += `👤 *Ім'я:* ${name}\n`;
+    report += `📧 *Email:* ${contact}\n\n`;
+    report += `🏁 *РЕЗУЛЬТАТИ АУДИТУ*\n`;
     userAnswers.forEach((a, i) => {
       report += `🔹 *${a.title}:* ${a.answer}\n`;
     });
 
-    const encodedReport = encodeURIComponent(report);
-    tgBtn.href = `https://t.me/blat_a?text=${encodedReport}`;
+    try {
+      await sendTelegram(report);
+      form.classList.add('hidden');
+      successDiv.classList.remove('hidden');
+    } catch (error) {
+      console.error('Error:', error);
+      alert('Помилка при надсиланні. Будь ласка, спробуйте ще раз або напишіть у Telegram.');
+      submitBtn.disabled = false;
+      submitBtn.innerText = 'Надіслати та отримати план';
+    }
+  });
+}
+
+async function sendTelegram(text) {
+  const BOT_TOKEN = import.meta.env.VITE_TELEGRAM_BOT_TOKEN;
+  const CHAT_ID = import.meta.env.VITE_TELEGRAM_CHAT_ID;
+
+  if (!BOT_TOKEN || !CHAT_ID) {
+    console.error('Telegram credentials not found in environment variables.');
+    return;
   }
 
-  showScreen('thank-you-screen');
+  const url = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`;
+  const response = await fetch(url, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      chat_id: CHAT_ID,
+      text: text,
+      parse_mode: 'Markdown'
+    })
+  });
+
+  if (!response.ok) throw new Error('Telegram API error');
 }
